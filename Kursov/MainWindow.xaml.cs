@@ -33,7 +33,7 @@ namespace Kursov
         {
             if (tbPass.Password == "admin" && tbLog.Text == "admin")
             {
-                Forms.MenuForm menuForm = new Forms.MenuForm();
+                Forms.Apartment menuForm = new Forms.Apartment();
                 menuForm.Show();
                 this.Close();
             }
@@ -41,7 +41,7 @@ namespace Kursov
 
         private void btInAdmin_Click(object sender, RoutedEventArgs e)
         {
-            Forms.MenuForm menuForm = new Forms.MenuForm();
+            Forms.Apartment menuForm = new Forms.Apartment();
             menuForm.Show();
             this.Close();
         }

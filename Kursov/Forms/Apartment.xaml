@@ -6,16 +6,16 @@
         xmlns:local="clr-namespace:Kursov.Forms"
         mc:Ignorable="d"
         Title="Apartment" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="mainGrid">
         <Grid.RowDefinitions>
-            <RowDefinition Height="27*"/>
-            <RowDefinition Height="161*"/>
-            <RowDefinition Height="21*"/>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="345*"/>
+            <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="54*"/>
-            <ColumnDefinition Width="140*"/>
-            <ColumnDefinition Width="91*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="457*"/>
+            <ColumnDefinition Width="185*"/>
         </Grid.ColumnDefinitions>
 
         <Button x:Name="btHome" Content="Домой" Margin="18,26,52,7" 
@@ -32,7 +32,7 @@
             </Button.RenderTransform>
         </Button>
 
-        <ListBox   Grid.Row="1" Grid.Column="1" x:Name="lbServis" Margin="0,0.8,8,12">
+        <ListBox   Grid.Row="1" Grid.Column="1" x:Name="lbServis" Margin="0,1,0,0">
             <ListBox.ItemTemplate >
                 <DataTemplate >
                     <Grid Margin="2,20,20,2 ">
@@ -50,38 +50,26 @@
                         <Border BorderThickness="1"
                                 Width="100" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" 
                                 >
-                            <Image Source="{Binding MainImagePath}"  />
+                            <Image Source="{Binding  Photo}"  />
                         </Border>
                         <TextBlock Grid.Row="0" Grid.Column="2"
-                                   Text="{Binding Title}" HorizontalAlignment="Center" />
+                                   Text="{Binding Address}" />
 
                         <TextBlock Grid.Row="1" Grid.Column="2">
-                           <Label Content="{Binding RealCost}" Background="Red"/>
-                           <Label Content="{Binding  DiscountCost}"/>
-                           <Label Content= "{Binding DurationInSeconds}"/>
+                           <Label Content="{Binding   Price}"/>
+                           <Label Content="Р. за месяц"/>
+                           <Label Content= "{Binding Room }"/>
+                             <Label Content="количество комнат"/>
                         </TextBlock>
 
-                        <TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding  Discount}" />
+                       
+                        <TextBlock Grid.Row="2" Grid.Column="2">
+                            <Label Content="{Binding  Square}"/>
+                           <Label Content="Площадь Квартиры"/>
+                        </TextBlock>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-
-        <Button x:Name="btAddServis" Content="Добавить сервис" Grid.Column="2" Grid.Row="0" Click="btAddServis_Click" Margin="24,22,0,11" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="209">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.199"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-
-        <StackPanel Grid.Row="1" Grid.Column="2" Margin="0,15,0,0" >
-
-
-
-        </StackPanel>
     </Grid>
 </Window>

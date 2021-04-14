@@ -22,16 +22,16 @@ namespace Kursov.Forms
         public Apartment()
         {
             InitializeComponent();
+            
+            bv.KursovEntities entities = new bv.KursovEntities();
+            lbServis.ItemsSource = entities.Apartment.ToList();
         }
 
         private void btHome_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void btAddServis_Click(object sender, RoutedEventArgs e)
-        {
-
+            MainWindow menuFotr = new MainWindow();
+            menuFotr.Show();
+            this.Close();
         }
     }
 }
