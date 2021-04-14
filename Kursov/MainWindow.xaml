@@ -32,9 +32,6 @@
                    Content="Пароль"/>
 
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                <Button Margin="10,10,10,10" 
-                    Content="Войти" 
-                        Height="35" x:Name="btInAdmin" Click="btInAdmin_Click" />
                 <Button Height="35" Content="Войти как гость" 
                     x:Name="btIn" Click="btIn_Click"/>
             </StackPanel>

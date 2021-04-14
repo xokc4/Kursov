@@ -39,11 +39,6 @@ namespace Kursov
             }
         }
 
-        private void btInAdmin_Click(object sender, RoutedEventArgs e)
-        {
-            Forms.Apartment menuForm = new Forms.Apartment();
-            menuForm.Show();
-            this.Close();
-        }
+        
     }
 }
